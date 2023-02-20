@@ -3,6 +3,9 @@ package com.acme;
 import java.io.*;
 import java.util.*;
 
+/**
+ * Process CSV files to sort by insurance company and last name first name order
+ */
 public class EnrolleeParser {
 
     /**
@@ -55,7 +58,7 @@ public class EnrolleeParser {
             for (Map.Entry<String, Enrollee> entry : uniqueEnrollees.entrySet()) {
                 companyEnrolleesList.add(entry.getValue());
             }
-            sortEnrolleesByLastFirst(companyEnrolleesList);
+            Collections.sort(companyEnrolleesList);
             writeToFile(company, companyEnrolleesList);
         }
     }

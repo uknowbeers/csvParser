@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -33,7 +34,7 @@ public class EnrolleesTest {
         myList.add(enrollee4);
         myList.add(enrollee5);
 
-        sut.sortEnrolleesByLastFirst(myList);
+        Collections.sort(myList);
 
         assertEquals("Aly", myList.get(0).getLastName());
         assertEquals("Zebra", myList.get(4).getLastName());
